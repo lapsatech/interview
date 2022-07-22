@@ -6,7 +6,7 @@ You have to write a PriceThrottler class which will implement the following requ
 
 1. Implement PriceProcessor interface
 
-2. Distribute updates to its listeners which are added through subscribe() and removed through unsubscribe()
+2. Distribute updates to its subscribers which are added through subscribe() and removed through unsubscribe()
 
 3. There is no thread-safety requirement at the moment
 
@@ -29,17 +29,17 @@ public interface PriceProcessor {
      /**
       * Subscribe for updates Called rarely during operation of PriceProcessor
       *
-      * @param priceConsumer
+      * @param subscriber
       *            - can be up to 200 subscribers
       */
-     void subscribe(PriceProcessor priceConsumer);
+     void subscribe(PriceProcessor subscriber);
 
      /**
       * Unsubscribe from updates Called rarely during operation of PriceProcessor
       *
-      * @param priceConsumer
+      * @param subscriber
       */
-     void unsubscribe(PriceProcessor priceConsumer);
+     void unsubscribe(PriceProcessor subscriber);
 }
 
 ```
