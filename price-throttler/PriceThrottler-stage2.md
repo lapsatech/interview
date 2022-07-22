@@ -27,19 +27,19 @@ public interface PriceProcessor {
      /**
       * Subscribe for updates Called rarely during operation of PriceProcessor
       *
-      * @param priceProcessor
+      * @param subscriber
       *            - can be up to 200 subscribers
       */
-     void subscribe(PriceProcessor priceProcessor);
+     void subscribe(PriceProcessor subscriber);
 
  
 
      /**
       * Unsubscribe from updates Called rarely during operation of PriceProcessor
       *
-      * @param priceProcessor
+      * @param subscriber
       */
-     void unsubscribe(PriceProcessor priceProcessor);
+     void unsubscribe(PriceProcessor subscriber);
 
  
 
